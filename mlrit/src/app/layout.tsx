@@ -12,6 +12,7 @@ import "@/styles/why-mlrit.css";
 import "@/styles/testimonials.css";
 import "@/styles/events-disc.css";
 import "@/styles/mobile.css";
+import "@/styles/placements.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",

@@ -154,7 +154,6 @@ export default function Placements() {
                 >
                   0
                 </span>
-                {s.suffix}
               </div>
               <div className="placement-stat__label">{s.label}</div>
             </div>

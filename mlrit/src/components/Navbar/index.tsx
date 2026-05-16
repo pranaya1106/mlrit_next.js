@@ -48,7 +48,7 @@ export default function Navbar() {
               <div className="dropdown">
                 <div className="dropdown__col">
                   <h4>Programmes</h4>
-                  <Link href="/departments/ug">Undergraduate (B.Tech)</Link>
+                  <Link href="/departments">Undergraduate (B.Tech)</Link>
                   <Link href="/departments/pg">Postgraduate (M.Tech and MBA)</Link>
                 </div>
                 <div className="dropdown__col">

@@ -1,2 +1,8 @@
 # Standalone static-site project — kept locally, not part of the Next.js deploy
 Website/
+
+# Claude Code local agent state (machine-specific)
+.claude/
+
+# Department syllabus PDFs (~152MB) — too large for git; serve from CDN/blob storage in prod
+mlrit/public/departments/syllabus/

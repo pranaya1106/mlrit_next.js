@@ -13,6 +13,7 @@ import "@/styles/testimonials.css";
 import "@/styles/events-disc.css";
 import "@/styles/mobile.css";
 import "@/styles/placements.css";
+import "@/styles/departments-module.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",

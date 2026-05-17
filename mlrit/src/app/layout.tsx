@@ -14,6 +14,7 @@ import "@/styles/events-disc.css";
 import "@/styles/mobile.css";
 import "@/styles/placements.css";
 import "@/styles/departments-module.css";
+import "@/styles/research.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",

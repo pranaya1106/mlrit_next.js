@@ -84,7 +84,7 @@ export default function Navbar() {
               <div className="dropdown">
                 <div className="dropdown__col">
                   <h4>Programs and Centres</h4>
-                  <Link href="/research">Overview</Link>
+                  <Link href="/research/overview">Overview</Link>
                   <Link href="/research/centers">Research Centers</Link>
                   <Link href="/research/sponsored-projects">Sponsored Projects</Link>
                   <Link href="/research/scholars">Research Scholars</Link>

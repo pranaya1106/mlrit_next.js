@@ -163,7 +163,7 @@ export default function EventsSection() {
         allowFullScreen
         frameBorder="0"
         scrolling="no"
-        src={isEmbed ? event.embed : ""}
+        src={isEmbed ? event.embed : undefined}
         style={{ display: isEmbed ? "block" : "none" }}
       />
 

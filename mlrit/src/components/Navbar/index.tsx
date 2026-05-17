@@ -123,22 +123,22 @@ export default function Navbar() {
             </li>
 
             <li className="main-nav__item">
-              <a href="#" className="main-nav__link">
+              <Link href="/iqac" className="main-nav__link">
                 IQAC <span className="chevron" />
-              </a>
+              </Link>
               <div className="dropdown">
                 <div className="dropdown__col">
                   <h4>IQAC</h4>
-                  <Link href="/iqac">About IQAC</Link>
-                  <Link href="/iqac#minutes">Minutes of Meetings</Link>
-                  <Link href="/iqac#aqar">AQAR Reports</Link>
-                  <Link href="/iqac#documents">Best Practices</Link>
+                  <Link href="/iqac/about">About IQAC</Link>
+                  <Link href="/iqac/minutes-of-meetings">Minutes of Meetings</Link>
+                  <Link href="/iqac/aqar-reports">AQAR Reports</Link>
+                  <Link href="/iqac/best-practices">Best Practices</Link>
                 </div>
                 <div className="dropdown__col">
                   <h4>Accreditation</h4>
-                  <Link href="/iqac/naac">NAAC</Link>
-                  <Link href="/iqac/nba">NBA</Link>
-                  <a href="#">NIRF</a>
+                  <Link href="/accreditation/naac">NAAC</Link>
+                  <Link href="/accreditation/nba">NBA</Link>
+                  <Link href="/accreditation/nirf">NIRF</Link>
                 </div>
               </div>
             </li>

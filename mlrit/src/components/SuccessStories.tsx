@@ -67,7 +67,12 @@ const INTERVAL = 2000;
 export default function SuccessStories() {
   const [current, setCurrent] = useState(0);
   const [leaving, setLeaving] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const goTo = useCallback((next: number) => {
     setCurrent((prev) => {
@@ -162,42 +167,48 @@ export default function SuccessStories() {
             })}
           </div>
 
-          <button
-            className="ss-arrow ss-arrow--prev"
-            id="ssPrev"
-            aria-label="Previous slide"
-            onClick={() => {
-              goTo(current - 1);
-              reset();
-            }}
-          >
-            ←
-          </button>
-          <button
-            className="ss-arrow ss-arrow--next"
-            id="ssNext"
-            aria-label="Next slide"
-            onClick={() => {
-              goTo(current + 1);
-              reset();
-            }}
-          >
-            →
-          </button>
-
-          <div className="ss-dots" id="ssDots" aria-hidden="true">
-            {STORIES.map((_, i) => (
+          {mounted && (
+            <>
               <button
-                key={i}
-                className={`ss-dot${i === current ? " ss-dot--active" : ""}`}
-                data-idx={i}
+                className="ss-arrow ss-arrow--prev"
+                id="ssPrev"
+                aria-label="Previous slide"
                 onClick={() => {
-                  goTo(i);
+                  goTo(current - 1);
                   reset();
                 }}
-              />
-            ))}
-          </div>
+              >
+                ←
+              </button>
+              <button
+                className="ss-arrow ss-arrow--next"
+                id="ssNext"
+                aria-label="Next slide"
+                onClick={() => {
+                  goTo(current + 1);
+                  reset();
+                }}
+              >
+                →
+              </button>
+
+              <div className="ss-dots" id="ssDots" aria-hidden="true">
+                {STORIES.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`ss-dot${
+                      i === current ? " ss-dot--active" : ""
+                    }`}
+                    data-idx={i}
+                    onClick={() => {
+                      goTo(i);
+                      reset();
+                    }}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

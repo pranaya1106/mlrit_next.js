@@ -52,7 +52,12 @@ const CARDS: Card[] = [
 
 export default function GallerySection() {
   const [soundEnabled, setSoundEnabled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleSound = () => {
     setSoundEnabled((s) => {
@@ -192,6 +197,7 @@ export default function GallerySection() {
         </div>
 
         <div className="testi-sound-bar">
+          {mounted && (
           <button
             className={`testi-mute${soundEnabled ? " is-unmuted" : ""}`}
             id="testiMute"
@@ -226,6 +232,7 @@ export default function GallerySection() {
             </svg>
             <span className="testi-mute-label">Sound</span>
           </button>
+          )}
         </div>
       </div>
     </section>

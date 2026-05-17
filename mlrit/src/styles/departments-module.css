@@ -1608,14 +1608,15 @@
   color: #888;
 }
 
-/* ── Placement stats ── */
+/* ── Placement stats (scoped to .placement-stats container — the homepage
+   uses a different parent .placements__stats and must not be touched) ── */
 .placement-stats {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   margin: 16px 0;
 }
-.placement-stat {
+.placement-stats .placement-stat {
   background: #fff;
   border-radius: 10px;
   padding: 20px 28px;
@@ -1625,13 +1626,13 @@
   min-width: 130px;
   border-top: 3px solid #e85d1f;
 }
-.placement-stat__num {
+.placement-stats .placement-stat__num {
   font-family: var(--font-montserrat), "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   color: #e85d1f;
 }
-.placement-stat__label {
+.placement-stats .placement-stat__label {
   font-size: 0.72rem;
   color: #888;
   font-weight: 600;

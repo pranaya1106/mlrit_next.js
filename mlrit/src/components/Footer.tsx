@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 const ACADEMICS = [
   { href: "https://mlrit.ac.in/about-us/course-intake/", label: "B.Tech Programs" },
@@ -54,28 +53,8 @@ const CONNECT = [
 ];
 
 export default function Footer() {
-  const footerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const footer = footerRef.current;
-    if (!footer) return;
-    const cols = footer.querySelectorAll<HTMLElement>(".sf-col-reveal");
-    if (!cols.length) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          cols.forEach((c) => c.classList.add("is-visible"));
-          io.disconnect();
-        }
-      },
-      { rootMargin: "300px 0px", threshold: 0 }
-    );
-    io.observe(footer);
-    return () => io.disconnect();
-  }, []);
-
   return (
-    <footer className="sticky-footer" ref={footerRef}>
+    <footer className="sticky-footer">
       <div className="sticky-footer__inner">
         <div className="sticky-footer__content">
           <div className="sticky-footer__bg" aria-hidden="true">
@@ -127,14 +106,13 @@ export default function Footer() {
           </div>
 
           <div className="sf-grid">
-            <div className="sf-brand sf-col-reveal">
+            <div className="sf-brand">
               <Image
                 src="/mlrit-logo-main.png"
                 alt="MLRIT"
                 className="sf-brand__logo"
                 width={180}
                 height={60}
-                loading="lazy"
               />
               <p className="sf-brand__desc">
                 MLR Institute of Technology, Dundigal, Hyderabad — shaping
@@ -208,26 +186,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <FooterColumn
-              title="Academics"
-              items={ACADEMICS}
-              delay="0.1s"
-            />
-            <FooterColumn
-              title="Admissions"
-              items={ADMISSIONS}
-              delay="0.2s"
-            />
-            <FooterColumn
-              title="Campus Life"
-              items={CAMPUS}
-              delay="0.3s"
-            />
-            <FooterColumn
-              title="Connect"
-              items={CONNECT}
-              delay="0.4s"
-            />
+            <FooterColumn title="Academics" items={ACADEMICS} />
+            <FooterColumn title="Admissions" items={ADMISSIONS} />
+            <FooterColumn title="Campus Life" items={CAMPUS} />
+            <FooterColumn title="Connect" items={CONNECT} />
           </div>
 
           <div className="sf-bottom">
@@ -255,17 +217,12 @@ type Item = { href: string; label: string; internal?: boolean };
 function FooterColumn({
   title,
   items,
-  delay,
 }: {
   title: string;
   items: readonly Item[];
-  delay: string;
 }) {
   return (
-    <div
-      className="sf-col sf-col-reveal"
-      style={{ "--delay": delay } as React.CSSProperties}
-    >
+    <div className="sf-col">
       <h5>{title}</h5>
       <ul>
         {items.map((item) =>

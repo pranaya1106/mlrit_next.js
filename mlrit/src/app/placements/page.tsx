@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PlacementHeroSection from "@/components/placements/PlacementHeroSection";
 import PlacementSidebar from "@/components/placements/PlacementSidebar";
 import PlacementStatsSection from "@/components/placements/PlacementStatsSection";
@@ -51,7 +50,6 @@ export default function PlacementsPage() {
 
         <PlacementSectionRevealer />
       </main>
-      <Footer />
     </>
   );
 }

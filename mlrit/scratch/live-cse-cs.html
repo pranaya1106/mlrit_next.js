@@ -26,10 +26,10 @@
     .dept-nav__sep { width: 1px; height: 20px; background: rgba(255,255,255,0.1); align-self: center; margin: 0 4px; }
 
     /* ── Hero ── */
-    .dept-hero { background: linear-gradient(135deg, #0D3320, #1F6B24); min-height: 60vh; padding: 80px 48px 60px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+    .dept-hero { background: linear-gradient(135deg, #155218, #1F6B24); min-height: 60vh; padding: 80px 48px 60px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
     .dept-hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
     .dept-hero__video.is-visible { opacity: 0.55; }
-    .dept-hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,51,32,0.75), rgba(24,69,59,0.75)); z-index: 1; transition: opacity 0.6s ease; }
+    .dept-hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(21, 82, 24,0.75), rgba(31, 107, 36,0.75)); z-index: 1; transition: opacity 0.6s ease; }
     .dept-hero:hover .dept-hero__overlay { opacity: 0.28; }
     .dept-hero__eyebrow, .dept-hero__title { position: relative; z-index: 2; }
     .dept-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(232,93,31,0.12), transparent 60%); pointer-events: none; z-index: 3; }
@@ -53,7 +53,7 @@
 
     .panel-heading { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; color: #0B0F1A; margin-bottom: 28px; line-height: 1.2; }
     .panel-heading::after { content: ''; display: block; width: 60px; height: 4px; background: #E85D1F; margin-top: 14px; border-radius: 2px; }
-    .panel-sub { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.72rem; font-weight: 800; color: #1F6B24; text-transform: uppercase; letter-spacing: 0.1em; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(24,69,59,0.12); }
+    .panel-sub { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.72rem; font-weight: 800; color: #1F6B24; text-transform: uppercase; letter-spacing: 0.1em; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(31, 107, 36,0.12); }
     p { font-size: 0.95rem; color: #3A3A3A; max-width: 780px; margin-bottom: 14px; line-height: 1.8; }
 
     /* ── Cards ── */
@@ -77,7 +77,7 @@
     /* ── Accordion ── */
     .sub-accordion { margin-bottom: 16px; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
     .sub-accordion__header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.88rem; font-weight: 700; color: #0B0F1A; border-left: 3px solid #1F6B24; transition: background 0.2s, border-left-color 0.25s, transform 0.2s; }
-    .sub-accordion__header:hover { background: rgba(24,69,59,0.04); border-left-color: #E85D1F; transform: translateX(4px); }
+    .sub-accordion__header:hover { background: rgba(31, 107, 36,0.04); border-left-color: #E85D1F; transform: translateX(4px); }
     .sub-accordion__chevron { font-size: 0.7rem; color: #888; transition: transform 0.3s; }
     .sub-accordion.is-open .sub-accordion__chevron { transform: rotate(180deg); color: #E85D1F; }
     .sub-accordion.is-open .sub-accordion__header { border-left-color: #E85D1F; color: #E85D1F; }
@@ -109,7 +109,7 @@
 
     /* ── Syllabus ── */
     .pill-row { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-    .pill { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 0.82rem; padding: 10px 22px; border-radius: 24px; border: 2px solid rgba(24,69,59,0.25); background: transparent; color: #3A3A3A; cursor: pointer; transition: all 0.25s; }
+    .pill { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 0.82rem; padding: 10px 22px; border-radius: 24px; border: 2px solid rgba(31, 107, 36,0.25); background: transparent; color: #3A3A3A; cursor: pointer; transition: all 0.25s; }
     .pill:hover { border-color: #E85D1F; color: #E85D1F; }
     .pill.is-active { background: #1F6B24; border-color: #1F6B24; color: #fff; }
     .subject-list { max-width: 700px; opacity: 0; transform: translateY(10px); transition: opacity 0.35s, transform 0.35s; }
@@ -117,12 +117,12 @@
     .subject-row { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,0.06); gap: 16px; cursor: pointer; }
     .subject-num { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 0.72rem; color: #1F6B24; width: 28px; }
     .subject-name { flex: 1; font-size: 0.92rem; color: #3A3A3A; }
-    .subject-code { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.7rem; font-weight: 700; color: #1F6B24; background: rgba(24,69,59,0.08); padding: 2px 8px; border-radius: 4px; flex-shrink: 0; letter-spacing: 0.04em; }
+    .subject-code { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.7rem; font-weight: 700; color: #1F6B24; background: rgba(31, 107, 36,0.08); padding: 2px 8px; border-radius: 4px; flex-shrink: 0; letter-spacing: 0.04em; }
     .syll-btn { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.72rem; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 5px; }
     .syll-btn--download { color: #fff; background: #1F6B24; }
-    .syll-btn--download:hover { background: #0D3320; }
+    .syll-btn--download:hover { background: #155218; }
     .full-syllabus-btn { display: inline-block; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff; background: #1F6B24; padding: 10px 24px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.2s; }
-    .full-syllabus-btn:hover { background: #0D3320; transform: translateY(-1px); }
+    .full-syllabus-btn:hover { background: #155218; transform: translateY(-1px); }
     .subject-pdf { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.7rem; font-weight: 700; color: #E85D1F; text-decoration: none; padding: 4px 12px; border: 1px solid rgba(232,93,31,0.3); border-radius: 6px; transition: all 0.2s; white-space: nowrap; }
     .subject-pdf:hover { background: #E85D1F; color: #fff; }
     .subject-toggle { font-size: 0.7rem; color: #888; margin-left: 8px; transition: transform 0.3s; display: inline-block; }
@@ -181,7 +181,7 @@
     .honour-table .honour-name { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; color: #0B0F1A; }
     .honour-table .honour-badge { display: inline-block; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; letter-spacing: 0.04em; }
     .honour-badge--topper { background: rgba(232,93,31,0.12); color: #E85D1F; }
-    .honour-badge--rank { background: rgba(24,69,59,0.1); color: #1F6B24; }
+    .honour-badge--rank { background: rgba(31, 107, 36,0.1); color: #1F6B24; }
     .honour-table .honour-score { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 1.05rem; color: #1F6B24; }
 
     /* ── Internship stats ── */
@@ -192,7 +192,7 @@
 
     /* ── Publications ── */
     .pub-filters { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
-    .pub-filter { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 0.75rem; padding: 7px 18px; border-radius: 20px; border: 2px solid rgba(24,69,59,0.25); background: transparent; color: #3A3A3A; cursor: pointer; transition: all 0.25s; }
+    .pub-filter { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 0.75rem; padding: 7px 18px; border-radius: 20px; border: 2px solid rgba(31, 107, 36,0.25); background: transparent; color: #3A3A3A; cursor: pointer; transition: all 0.25s; }
     .pub-filter:hover { border-color: #E85D1F; color: #E85D1F; }
     .pub-filter.is-active { background: #1F6B24; border-color: #1F6B24; color: #fff; }
     .pub-list { display: flex; flex-direction: column; gap: 16px; max-width: 780px; }
@@ -203,7 +203,7 @@
     .pub-card__authors { font-size: 0.82rem; color: #888; margin-bottom: 4px; }
     .pub-card__journal { font-size: 0.82rem; color: #E85D1F; font-style: italic; }
     .pub-card__year { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 0.68rem; color: #fff; background: #1F6B24; padding: 4px 10px; border-radius: 10px; flex-shrink: 0; }
-    .pub-tag { display: inline-block; margin-top: 8px; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.68rem; font-weight: 700; color: #1F6B24; background: rgba(24,69,59,0.08); padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .pub-tag { display: inline-block; margin-top: 8px; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.68rem; font-weight: 700; color: #1F6B24; background: rgba(31, 107, 36,0.08); padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
 
     /* ── Placement stats ── */
     .placement-stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
@@ -220,10 +220,10 @@
     .committee-table tbody tr:hover td { background: rgba(232,93,31,0.04); }
     .committee-table td:last-child { border-radius: 0 8px 8px 0; }
     .committee-badge { display: inline-block; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; letter-spacing: 0.04em; }
-    .badge--chairman { background: rgba(24,69,59,0.12); color: #1F6B24; }
+    .badge--chairman { background: rgba(31, 107, 36,0.12); color: #1F6B24; }
     .badge--convener { background: rgba(232,93,31,0.12); color: #E85D1F; }
     .badge--industry { background: rgba(11,15,26,0.08); color: #0B0F1A; }
-    .badge--academic { background: rgba(24,69,59,0.06); color: #1F6B24; }
+    .badge--academic { background: rgba(31, 107, 36,0.06); color: #1F6B24; }
 
     /* ── Orange streak ── */
     @keyframes orange-streak { 0% { transform: scaleX(0); opacity: 1; } 65% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: 0; } }

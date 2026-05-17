@@ -320,7 +320,7 @@ export default function Navbar() {
                     aria-label="Call toll free"
                   >
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                      <circle cx="16" cy="16" r="16" fill="#18453B" />
+                      <circle cx="16" cy="16" r="16" fill="#1F6B24" />
                       <path
                         d="M11.5 10h2.8l1.2 3-1.6 1a9.1 9.1 0 0 0 4.1 4.1l1-1.6 3 1.2v2.8A1.5 1.5 0 0 1 20.5 22C13.6 22 10 18.4 10 11.5A1.5 1.5 0 0 1 11.5 10Z"
                         fill="#fff"

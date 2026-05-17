@@ -64,9 +64,33 @@ export default function DeptShell({ sidebar, children }: Props) {
     setActiveSidebar(targetId);
     if (typeof document === "undefined") return;
     const el = document.getElementById(targetId);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 60;
+    if (!el) return;
+
+    // If the target sits inside a collapsed sub-accordion (Labs, History, etc.),
+    // open it so the user actually sees content after the scroll. Also open
+    // when the target IS the accordion wrapper itself.
+    const accordion =
+      (el.classList.contains("sub-accordion")
+        ? el
+        : el.closest(".sub-accordion")) as HTMLElement | null;
+    if (accordion && !accordion.classList.contains("is-open")) {
+      const header = accordion.querySelector<HTMLButtonElement>(
+        ".sub-accordion__header"
+      );
+      header?.click();
+    }
+
+    // Use a small delay so the accordion can start expanding before we measure.
+    const doScroll = () => {
+      const tabBar = document.querySelector<HTMLElement>(".dept-tabs");
+      const offset = (tabBar?.offsetHeight ?? 48) + 8;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
+    };
+    if (accordion) {
+      window.setTimeout(doScroll, 120);
+    } else {
+      doScroll();
     }
   }, []);
 

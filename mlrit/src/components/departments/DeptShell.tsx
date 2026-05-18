@@ -23,10 +23,22 @@ type Props = {
 export default function DeptShell({ sidebar, children }: Props) {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const [activeSidebar, setActiveSidebar] = useState<string | null>(null);
+  const [presentTargets, setPresentTargets] = useState<Set<string> | null>(
+    null
+  );
   const streakRef = useRef<HTMLDivElement>(null);
   const panelsRootRef = useRef<HTMLDivElement>(null);
+  const suppressScrollSpy = useRef(false);
+  const suppressTimer = useRef<number | null>(null);
 
-  const visibleSidebar = sidebar.filter((it) => it.tab === activeTab);
+  // Until we've measured the DOM, show every sidebar entry that belongs to the
+  // active tab. After mount we filter to only those whose targets actually
+  // rendered so empty sections don't show up as dead Quick Nav links.
+  const visibleSidebar = sidebar.filter(
+    (it) =>
+      it.tab === activeTab &&
+      (presentTargets === null || presentTargets.has(it.targetId))
+  );
 
   // Toggle .is-active on each panel based on activeTab
   useEffect(() => {
@@ -39,6 +51,19 @@ export default function DeptShell({ sidebar, children }: Props) {
       p.classList.toggle("is-active", isMatch);
     });
   }, [activeTab]);
+
+  // After each tab switch, recompute which sidebar targets actually exist in
+  // the DOM. Conditional sections (e.g. an empty Syllabus PDFs list) won't
+  // emit their target id, so we filter the Quick Nav to match what's rendered.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const ids = new Set<string>();
+    for (const item of sidebar) {
+      if (item.tab !== activeTab) continue;
+      if (document.getElementById(item.targetId)) ids.add(item.targetId);
+    }
+    setPresentTargets(ids);
+  }, [activeTab, sidebar]);
 
   const fireStreak = useCallback(() => {
     const el = streakRef.current;
@@ -62,6 +87,14 @@ export default function DeptShell({ sidebar, children }: Props) {
 
   const handleSidebarClick = useCallback((targetId: string) => {
     setActiveSidebar(targetId);
+    suppressScrollSpy.current = true;
+    if (suppressTimer.current !== null) {
+      window.clearTimeout(suppressTimer.current);
+    }
+    suppressTimer.current = window.setTimeout(() => {
+      suppressScrollSpy.current = false;
+      suppressTimer.current = null;
+    }, 800);
     if (typeof document === "undefined") return;
     const el = document.getElementById(targetId);
     if (!el) return;
@@ -100,6 +133,61 @@ export default function DeptShell({ sidebar, children }: Props) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
+
+  // Scroll-spy: highlight the Quick Nav item whose section is currently in view.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const tabIds = sidebar.filter((it) => it.tab === activeTab).map((it) => it.targetId);
+    if (tabIds.length === 0) return;
+
+    const targets = tabIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (targets.length === 0) return;
+
+    const visibleIds = new Set<string>();
+
+    const pickActive = () => {
+      if (suppressScrollSpy.current) return;
+      if (visibleIds.size === 0) return;
+      // Of the currently-intersecting targets, pick the one nearest the top.
+      let bestId: string | null = null;
+      let bestTop = Number.POSITIVE_INFINITY;
+      visibleIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top;
+        if (top < bestTop) {
+          bestTop = top;
+          bestId = id;
+        }
+      });
+      if (bestId !== null) setActiveSidebar(bestId);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) visibleIds.add(id);
+          else visibleIds.delete(id);
+        });
+        pickActive();
+      },
+      { threshold: 0, rootMargin: "-25% 0px -55% 0px" }
+    );
+
+    targets.forEach((t) => io.observe(t));
+    return () => io.disconnect();
+  }, [activeTab, sidebar]);
+
+  useEffect(() => {
+    return () => {
+      if (suppressTimer.current !== null) {
+        window.clearTimeout(suppressTimer.current);
+      }
+    };
+  }, []);
 
   return (
     <>

@@ -14,7 +14,7 @@ export default function FacultyResearchSection({ data }: Props) {
 
   return (
     <>
-      <div className="dept-tabs" role="tablist" aria-label="Department">
+      <div className="res-dept-tabs" role="tablist" aria-label="Department">
         {data.tabs.map((tab) => {
           const isActive = tab.id === activeTab;
           return (
@@ -23,7 +23,7 @@ export default function FacultyResearchSection({ data }: Props) {
               type="button"
               role="tab"
               aria-selected={isActive}
-              className={`dept-tab${isActive ? " is-active" : ""}`}
+              className={`res-dept-tab${isActive ? " is-active" : ""}`}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.label}

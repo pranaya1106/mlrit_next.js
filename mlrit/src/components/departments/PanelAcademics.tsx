@@ -19,41 +19,45 @@ export default function PanelAcademics({ slug, content, active }: Props) {
     >
       <h2 className="panel-heading">Academics</h2>
 
-      <div className="panel-sub" id="syll-pdfs">
-        Syllabus PDFs
-      </div>
-      <div className="catalog-grid catalog-grid--one">
-        {syllabusPdfs.map((pdf) => (
-          <div
-            key={pdf.label + pdf.viewHref}
-            className="catalog-item catalog-item--split"
-          >
-            <div>
-              <span className="catalog-item__text">{pdf.label}</span>
-              {pdf.sublabel && (
-                <span className="catalog-item__sub">{pdf.sublabel}</span>
-              )}
-            </div>
-            <div className="syll-actions">
-              <a
-                href={pdf.viewHref}
-                target="_blank"
-                rel="noreferrer"
-                className="syll-btn syll-btn--view"
-              >
-                View
-              </a>
-              <a
-                href={pdf.downloadHref}
-                download
-                className="syll-btn syll-btn--download"
-              >
-                Download
-              </a>
-            </div>
+      {syllabusPdfs.length > 0 && (
+        <>
+          <div className="panel-sub" id="syll-pdfs">
+            Syllabus PDFs
           </div>
-        ))}
-      </div>
+          <div className="catalog-grid catalog-grid--one">
+            {syllabusPdfs.map((pdf) => (
+              <div
+                key={pdf.label + pdf.viewHref}
+                className="catalog-item catalog-item--split"
+              >
+                <div>
+                  <span className="catalog-item__text">{pdf.label}</span>
+                  {pdf.sublabel && (
+                    <span className="catalog-item__sub">{pdf.sublabel}</span>
+                  )}
+                </div>
+                <div className="syll-actions">
+                  <a
+                    href={pdf.viewHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="syll-btn syll-btn--view"
+                  >
+                    View
+                  </a>
+                  <a
+                    href={pdf.downloadHref}
+                    download
+                    className="syll-btn syll-btn--download"
+                  >
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {courseCatalog.length > 0 && (
         <>

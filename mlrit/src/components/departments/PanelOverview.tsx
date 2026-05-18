@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { OverviewContent } from "@/data/departments-types";
+import HodPhoto from "./HodPhoto";
 import SubAccordion from "./SubAccordion";
 
 type Props = {
@@ -24,13 +24,7 @@ export default function PanelOverview({ content, active }: Props) {
 
       <div id="hod-msg" className="hod-msg">
         <div className="hod-msg__photo">
-          <Image
-            src={hod.photo}
-            alt={hod.name}
-            width={100}
-            height={100}
-            sizes="100px"
-          />
+          <HodPhoto src={hod.photo} name={hod.name} />
         </div>
         <div className="hod-msg__content">
           <div className="hod-msg__label">From the HOD&apos;s Desk</div>

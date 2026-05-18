@@ -423,8 +423,9 @@
 .year-head .year-meta { font-family: var(--r-display); font-size:0.72rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--r-ink-muted); }
 
 /* ──────────────────────────────── DEPT TAB STRIP ──────────────────────────────── */
-.dept-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--r-border); margin-bottom: 32px; }
-.dept-tab {
+/* Scoped names to avoid colliding with the department pages' .dept-tab styles. */
+.res-dept-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--r-border); margin-bottom: 32px; }
+.res-dept-tab {
   font-family: var(--r-display);
   font-size: 0.82rem;
   font-weight: 600;
@@ -440,8 +441,8 @@
   border-right: 0;
   border-top: 0;
 }
-.dept-tab:hover { color: var(--r-ink); }
-.dept-tab.is-active { color: var(--r-green); border-bottom-color: var(--r-orange); }
+.res-dept-tab:hover { color: var(--r-ink); }
+.res-dept-tab.is-active { color: var(--r-green); border-bottom-color: var(--r-orange); }
 .fac-panel { display: none; }
 .fac-panel.is-active { display: block; }
 

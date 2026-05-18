@@ -1359,30 +1359,30 @@ export const departmentsContent: Record<string, DepartmentContent> = {
       ],
       courseCatalog: [
         {
-          href: "/departments/cse-r25.html",
+          href: "/departments/syllabus/pdfs/cse-r25-syllabus.pdf",
           label: "R25 Course Catalog",
-          sublabel: "Browse semester-wise online"
+          sublabel: "2025 regulation"
         },
         {
-          href: "/departments/cse-r22.html",
+          href: "/departments/syllabus/pdfs/cse-r22-syllabus.pdf",
           label: "R22 Course Catalog",
-          sublabel: "Browse semester-wise online"
+          sublabel: "2022 regulation"
         },
         {
-          href: "/departments/cse-mlr20.html",
+          href: "/departments/syllabus/pdfs/cse-mlr20-syllabus.pdf",
           label: "MLR20 Course Catalog",
-          sublabel: "Browse semester-wise online"
+          sublabel: "MLR 2020 regulation"
         },
         {
-          href: "/departments/cse-mlr18.html",
+          href: "/departments/syllabus/pdfs/cse-mlr18-syllabus.pdf",
           label: "MLR18 Course Catalog",
-          sublabel: "Browse semester-wise online"
+          sublabel: "MLR 2018 regulation"
         }
       ],
       regulations: {
         r25: {
           label: "R25",
-          fullSyllabusHref: "/departments/cse-r25.html",
+          fullSyllabusHref: "/departments/syllabus/pdfs/cse-r25-syllabus.pdf",
           years: {
             "1": {
               "1": [["A7BS01", "Matrices and Calculus"], ["A7PH01", "Advanced Engineering Physics"], ["A7CS01", "Programming for Problem Solving"], ["A7EE01", "Basic Electrical Engineering"], ["A7ME01", "Computer Aided Engineering Drawing"], ["A7PH01L", "Advanced Engineering Physics Lab"], ["A7CS01L", "Programming for Problem Solving Lab"], ["A7EE01L", "Basic Electrical Engineering Lab"], ["A7CS02L", "IOT and IT Workshop"]],
@@ -1404,7 +1404,7 @@ export const departmentsContent: Record<string, DepartmentContent> = {
         },
         r22: {
           label: "R22",
-          fullSyllabusHref: "/departments/cse-r22.html",
+          fullSyllabusHref: "/departments/syllabus/pdfs/cse-r22-syllabus.pdf",
           years: {
             "1": {
               "1": [["22BS01", "Mathematics-I"], ["22PH01", "Engineering Physics"], ["22CS01", "Programming for Problem Solving (C)"], ["22EE01", "Basic Electrical Engineering"], ["22ME01", "Engineering Drawing"], ["22PH01L", "Physics Lab"], ["22CS01L", "C Programming Lab"], ["22EN01L", "English Lab"], ["22ME02L", "Workshop"]],
@@ -1426,7 +1426,7 @@ export const departmentsContent: Record<string, DepartmentContent> = {
         },
         mlr20: {
           label: "MLR20",
-          fullSyllabusHref: "/departments/cse-mlr20.html",
+          fullSyllabusHref: "/departments/syllabus/pdfs/cse-mlr20-syllabus.pdf",
           years: {
             "1": {
               "1": [["20BS01", "Mathematics-I"], ["20PH01", "Engineering Physics"], ["20CS01", "Problem Solving using C"], ["20EE01", "Basic Electrical Engineering"], ["20ME01", "Engineering Graphics"], ["20PH01L", "Physics Lab"], ["20CS01L", "C Lab"], ["20EN01L", "English Lab"]],
@@ -1448,7 +1448,7 @@ export const departmentsContent: Record<string, DepartmentContent> = {
         },
         mlr18: {
           label: "MLR18",
-          fullSyllabusHref: "/departments/cse-mlr18.html",
+          fullSyllabusHref: "/departments/syllabus/pdfs/cse-mlr18-syllabus.pdf",
           years: {
             "1": {
               "1": [["18BS01", "Mathematics-I"], ["18PH01", "Engineering Physics"], ["18CS01", "Computer Programming (C)"], ["18EE01", "Basic Electrical Engineering"], ["18ME01", "Engineering Drawing"], ["18PH01L", "Physics Lab"], ["18CS01L", "C Lab"], ["18EN01L", "English Lab"]],
@@ -2434,6 +2434,29 @@ export const departmentsContent: Record<string, DepartmentContent> = {
     academics: {
       syllabusPdfs: [],
       courseCatalog: [],
+      regulations: {
+        r25: {
+          label: "R25",
+          years: {
+            "1": {
+              "1": [["A7BS01", "Matrices and Calculus"], ["A7PH01", "Engineering Physics"], ["A7AI01", "Problem Solving using Python"], ["A7EN01", "English for Communication"], ["A7ME01", "Engineering Drawing"], ["A7AI01L", "Python Lab"], ["A7PH01L", "Physics Lab"]],
+              "2": [["A7BS02", "Ordinary Differential Equations"], ["A7CH01", "Engineering Chemistry"], ["A7AI02", "Data Structures using Python"], ["A7AI03", "Digital Logic Design"], ["A7MC01", "Environmental Science"], ["A7AI02L", "Data Structures Lab"], ["A7CH01L", "Chemistry Lab"]]
+            },
+            "2": {
+              "3": [["A7BS03", "Probability and Statistics"], ["A7AI04", "Database Management Systems"], ["A7AI05", "Object Oriented Programming with Java"], ["A7AI06", "Computer Organisation"], ["A7AI07", "Machine Learning Fundamentals"], ["A7AI04L", "DBMS Lab"], ["A7AI07L", "ML Lab"]],
+              "4": [["A7BS04", "Linear Algebra for AI"], ["A7AI08", "Design and Analysis of Algorithms"], ["A7AI09", "Artificial Intelligence"], ["A7AI10", "Operating Systems"], ["A7AIOE1", "Open Elective-I"], ["A7AI09L", "AI Lab"], ["A7AI10L", "OS Lab"]]
+            },
+            "3": {
+              "5": [["A7AI11", "Deep Learning"], ["A7AI12", "Computer Vision"], ["A7AI13", "Natural Language Processing"], ["A7AI14", "Big Data Analytics"], ["A7AIPE1", "Professional Elective-I"], ["A7AI11L", "Deep Learning Lab"], ["A7AI13L", "NLP Lab"]],
+              "6": [["A7AI15", "Reinforcement Learning"], ["A7AI16", "Generative AI"], ["A7AI17", "Cloud Computing for AI"], ["A7AIPE2", "Professional Elective-II"], ["A7AIOE2", "Open Elective-II"], ["A7AI16L", "Generative AI Lab"], ["A7AI18", "Mini Project"]]
+            },
+            "4": {
+              "7": [["A7AI19", "AI Ethics and Governance"], ["A7AI20", "MLOps and Deployment"], ["A7AIPE3", "Professional Elective-III"], ["A7AIPE4", "Professional Elective-IV"], ["A7AIOE3", "Open Elective-III"], ["A7AI20L", "MLOps Lab"], ["A7AI21", "Internship"]],
+              "8": [["A7AIPE5", "Professional Elective-V"], ["A7AIPE6", "Professional Elective-VI"], ["A7AI22", "Project Work Phase-II"], ["A7AI23", "Seminar"]]
+            }
+          }
+        }
+      },
       subjectDetails: {
         "Matrices and Calculus": [
           "Matrices and Linear Transformations",
@@ -5351,6 +5374,12 @@ export const departmentsContent: Record<string, DepartmentContent> = {
           downloadHref: "/departments/syllabus/pdfs/ece-r25-syllabus.pdf"
         },
         {
+          label: "R22 Complete Syllabus",
+          sublabel: "2022 regulation",
+          viewHref: "/departments/syllabus/pdfs/ece-r22-syllabus.pdf",
+          downloadHref: "/departments/syllabus/pdfs/ece-r22-syllabus.pdf"
+        },
+        {
           label: "MLR20 Complete Syllabus",
           sublabel: "MLR 2020 regulation",
           viewHref: "/departments/syllabus/pdfs/ece-mlr20-syllabus.pdf",
@@ -6120,8 +6149,14 @@ export const departmentsContent: Record<string, DepartmentContent> = {
           downloadHref: "/departments/syllabus/pdfs/eee-r22-syllabus.pdf"
         },
         {
+          label: "MLR20 Complete Syllabus",
+          sublabel: "MLR 2020 regulation",
+          viewHref: "/departments/syllabus/pdfs/eee-mlr20-syllabus.pdf",
+          downloadHref: "/departments/syllabus/pdfs/eee-mlr20-syllabus.pdf"
+        },
+        {
           label: "MLR18 Complete Syllabus",
-          sublabel: "2.0 MB",
+          sublabel: "MLR 2018 regulation",
           viewHref: "/departments/syllabus/pdfs/eee-mlr18-syllabus.pdf",
           downloadHref: "/departments/syllabus/pdfs/eee-mlr18-syllabus.pdf"
         }
@@ -6904,15 +6939,21 @@ export const departmentsContent: Record<string, DepartmentContent> = {
       syllabusPdfs: [
         {
           label: "R25 Complete Syllabus",
-          sublabel: "2025 regulation",
+          sublabel: "B.Tech — 2025 regulation",
           viewHref: "/departments/syllabus/pdfs/mech-r25-syllabus.pdf",
           downloadHref: "/departments/syllabus/pdfs/mech-r25-syllabus.pdf"
         },
         {
           label: "R22 Complete Syllabus",
-          sublabel: "9.4 MB",
+          sublabel: "B.Tech — 2022 regulation",
           viewHref: "/departments/syllabus/pdfs/mech-r22-complete.pdf",
           downloadHref: "/departments/syllabus/pdfs/mech-r22-complete.pdf"
+        },
+        {
+          label: "M.Tech R25 Syllabus",
+          sublabel: "Postgraduate — 2025 regulation",
+          viewHref: "/departments/syllabus/pdfs/mech-pg-r25-syllabus.pdf",
+          downloadHref: "/departments/syllabus/pdfs/mech-pg-r25-syllabus.pdf"
         }
       ],
       courseCatalog: [

@@ -16,7 +16,7 @@ const EVENTS: EventItem[] = [
   {
     type: "video",
     video:
-      "https://res.cloudinary.com/dhqhhtvym/video/upload/v1777366731/equinox.mp4",
+      "/events-bg.mp4",
     logo: "/assets/logo.svg",
     tag: "Entrepreneurship Summit · 2024",
     title: "The Equinox<br>E-Summit 2K24",

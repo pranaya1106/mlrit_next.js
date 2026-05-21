@@ -10,10 +10,7 @@ export default function HeroSection() {
         playsInline
         preload="auto"
       >
-        <source
-          src="https://res.cloudinary.com/dhqhhtvym/video/upload/v1777367629/hero1_hq.mp4"
-          type="video/mp4"
-        />
+        <source src="/hero2.mp4" type="video/mp4" />
       </video>
 
       <div className="hero__content">

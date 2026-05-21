@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import NavInteractions from "./NavInteractions";
 
@@ -8,12 +7,10 @@ export default function Navbar() {
       <div className="masthead masthead--v2">
         <div className="masthead__inner">
           <Link href="/" className="masthead__logo" aria-label="MLRIT Home">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/mlrit-logo-main.png"
               alt="MLRIT Logo"
-              width={180}
-              height={56}
-              priority
               className="masthead__logo-img"
             />
           </Link>

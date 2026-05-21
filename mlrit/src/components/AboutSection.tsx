@@ -71,7 +71,7 @@ export default function AboutSection() {
             className="why-section__video"
             id="whyVideo"
             ref={videoRef}
-            src="https://res.cloudinary.com/dhqhhtvym/video/upload/v1777366655/sports.mp4"
+            src="/sports.mp4"
             muted
             loop
             playsInline

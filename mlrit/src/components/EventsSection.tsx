@@ -23,8 +23,8 @@ const EVENTS: EventItem[] = [
     desc: "MLRIT's flagship annual summit bringing together entrepreneurs, investors, and innovators to inspire the next generation of leaders.",
   },
   {
-    type: "embed",
-    embed: "https://www.instagram.com/reel/DRrMiTKjP8w/embed/",
+    type: "video",
+    video: "/inno.mp4",
     logo: "/assets/main logo.svg",
     tag: "Technical & Cultural Fest · 2025",
     title: "Zignasa<br>2025",

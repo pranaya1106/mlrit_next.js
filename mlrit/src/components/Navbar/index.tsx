@@ -147,9 +147,17 @@ export default function Navbar() {
             </li>
 
             <li className="main-nav__item">
-              <Link href="/iqac" className="main-nav__link">
-                IQAC
-              </Link>
+              <a href="#" className="main-nav__link">
+                IQAC <span className="chevron" />
+              </a>
+              <div className="dropdown">
+                <div className="dropdown__col">
+                  <h4>Quality &amp; Accreditation</h4>
+                  <Link href="/iqac">IQAC</Link>
+                  <a href="https://naac.mlrit.ac.in/" target="_blank" rel="noopener">NAAC</a>
+                  <Link href="/accreditation/nba">NBA</Link>
+                </div>
+              </div>
             </li>
 
             <li className="main-nav__item">

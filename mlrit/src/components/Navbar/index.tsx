@@ -153,10 +153,10 @@ export default function Navbar() {
               <div className="dropdown">
                 <div className="dropdown__col">
                   <h4>IQAC</h4>
-                  <Link href="/iqac/about">About IQAC</Link>
-                  <Link href="/iqac/minutes-of-meetings">Minutes of Meetings</Link>
-                  <Link href="/iqac/aqar-reports">AQAR Reports</Link>
-                  <Link href="/iqac/best-practices">Best Practices</Link>
+                  <Link href="/iqac#about">About IQAC</Link>
+                  <Link href="/iqac#minutes">Minutes of Meeting</Link>
+                  <Link href="/iqac#aqar">AQAR Reports</Link>
+                  <Link href="/iqac#documents">Best Practices</Link>
                 </div>
                 <div className="dropdown__col">
                   <h4>Accreditation</h4>

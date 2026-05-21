@@ -51,7 +51,7 @@ export const deptListingCards: DeptListingCard[] = [
       "Hands-on data engineering, analytics, and predictive modelling. Career pathway into the booming data-science industry.",
     stats: [
       { value: "60", label: "Intake" },
-      { value: "—", label: "Faculty" },
+      { value: "47", label: "Faculty" },
       { value: "2020", label: "Est." },
     ],
   },
@@ -63,7 +63,7 @@ export const deptListingCards: DeptListingCard[] = [
       "Network security, ethical hacking, cryptography, and incident response — for the world's most in-demand security roles.",
     stats: [
       { value: "60", label: "Intake" },
-      { value: "—", label: "Faculty" },
+      { value: "15", label: "Faculty" },
       { value: "2020", label: "Est." },
     ],
   },
@@ -75,7 +75,7 @@ export const deptListingCards: DeptListingCard[] = [
       "Combines core Computer Science with the breadth of IT — software, networks, databases, cloud, and modern web stacks.",
     stats: [
       { value: "60", label: "Intake" },
-      { value: "—", label: "Faculty" },
+      { value: "20", label: "Faculty" },
       { value: "2020", label: "Est." },
     ],
   },
@@ -87,7 +87,7 @@ export const deptListingCards: DeptListingCard[] = [
       "Established 2005. Strong foundation in software engineering, networking, databases, and emerging IT industry skills.",
     stats: [
       { value: "180", label: "Intake" },
-      { value: "—", label: "Faculty" },
+      { value: "22", label: "Faculty" },
       { value: "2005", label: "Est." },
     ],
   },

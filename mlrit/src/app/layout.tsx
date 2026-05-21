@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat } from "next/font/google";
+import { Poppins, Montserrat, Manrope, Playfair_Display } from "next/font/google";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import "./globals.css";
 import "@/styles/main.css";
@@ -16,6 +16,8 @@ import "@/styles/placements.css";
 import "@/styles/departments-module.css";
 import "@/styles/research.css";
 import "@/styles/iqac.css";
+import "@/styles/chronicles.css";
+import "@/styles/theme.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -27,6 +29,21 @@ const poppins = Poppins({
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -56,7 +73,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${montserrat.variable} ${manrope.variable} ${playfairDisplay.variable}`}
+    >
       <body>
         {children}
         <RevealOnScroll />

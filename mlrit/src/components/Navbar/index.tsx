@@ -5,22 +5,46 @@ import NavInteractions from "./NavInteractions";
 export default function Navbar() {
   return (
     <header className="site-header">
-      <div className="masthead">
-        <div className="container masthead__inner">
+      <div className="masthead masthead--v2">
+        <div className="masthead__inner">
           <Link href="/" className="masthead__logo" aria-label="MLRIT Home">
             <Image
               src="/mlrit-logo-main.png"
               alt="MLRIT Logo"
               width={180}
-              height={60}
+              height={56}
               priority
+              className="masthead__logo-img"
             />
           </Link>
-          <div className="masthead__tagline">
-            <span>Marri Laxman Reddy Institute of Technology</span>
+
+          <div className="masthead__institute">
+            <div className="masthead__mlr">
+              M<span className="dot">·</span>L<span className="dot">·</span>R
+            </div>
+            <div className="masthead__institute-name">Institute of Technology</div>
+            <div className="masthead__rule" />
+            <div className="masthead__institute-caption">ENGINEERING · SCIENCES · SPORT</div>
           </div>
-          <a href="#" className="masthead__eapcet">
-            EAPCET CODE : MLID
+
+          <div className="masthead__est">
+            <div className="masthead__est-top">
+              <span className="masthead__est-dot" />
+              <span className="masthead__est-text">EST · 2005</span>
+            </div>
+            <div className="masthead__est-loc">DUNDIGAL · HYDERABAD</div>
+            <div className="masthead__est-badge">AUTONOMOUS · UGC &#x2019;15</div>
+          </div>
+
+          <div className="masthead__spacer" aria-hidden="true" />
+
+          <a href="#contact" className="masthead__contact">
+            <span className="masthead__contact-chev" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </span>
+            <span>Contact Us</span>
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import DepartmentDetail from "@/components/departments/DepartmentDetail";
 import { departmentsContent } from "@/data/departments-content";
 import { deptListingCards } from "@/data/departments-listing";
@@ -41,6 +42,7 @@ export default async function DepartmentDetailPage({
     <>
       <Navbar />
       <DepartmentDetail dept={dept} />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="hero">
+    <section className="hero hero--v2">
       <video
         className="hero__bg hero__bg--a is-active"
         id="heroA"
@@ -17,24 +17,23 @@ export default function HeroSection() {
       </video>
 
       <div className="hero__content">
-        <div className="hero__headline">
-          <h1>
-            <span className="hero__line hero__line--1">Where</span>
-            <span className="hero__line hero__line--2">Innovation</span>
-            <span className="hero__line hero__line--3">
-              Meets <em className="hero__gold">Excellence.</em>
-            </span>
-          </h1>
-          <p className="hero__sub">
-            MLRIT shapes engineers, thinkers, and leaders ready to solve
-            tomorrow&apos;s challenges — right here in Hyderabad.
-          </p>
-        </div>
+        <h1 className="hero__title">
+          Engineering
+          <span className="hero__title-italic">the Future.</span>
+        </h1>
+        <p className="hero__sub">
+          Two decades of shaping minds. 11,000+ engineers and counting. At
+          MLRIT, we don&apos;t just teach the future — we build it.
+        </p>
+        <a href="#stats" className="hero__cta">
+          <span className="hero__cta-chev" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </span>
+          <span>Explore Programs</span>
+        </a>
       </div>
-
-      <a href="#stats" className="hero__scroll" aria-label="Scroll down">
-        <span className="hero__scroll-line" />
-      </a>
     </section>
   );
 }

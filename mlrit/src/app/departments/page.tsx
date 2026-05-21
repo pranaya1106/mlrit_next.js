@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import DepartmentListingCard from "@/components/departments/DepartmentListingCard";
 import { deptListingCards } from "@/data/departments-listing";
 
@@ -21,8 +22,8 @@ export default function DepartmentsPage() {
             Undergraduate Programmes
           </h1>
           <p className="prog-hero__sub">
-            Choose from 5 B.Tech disciplines with NBA accreditation, industry
-            partnerships, and 840+ annual intake across all branches.
+            Choose from B.Tech disciplines across 10 departments with NBA
+            accreditation, industry partnerships, and 1800+ annual intake.
           </p>
         </section>
 
@@ -38,6 +39,7 @@ export default function DepartmentsPage() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

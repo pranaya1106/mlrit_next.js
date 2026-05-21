@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import AccreditationLayout from "@/components/iqac/AccreditationLayout";
 import { accreditationPages, accreditationSlugs } from "@/data/accreditation";
 
@@ -31,6 +31,11 @@ export default async function AccreditationSubpage({
   params: Promise<RouteParams>;
 }) {
   const { slug } = await params;
+
+  if (slug === "naac") {
+    redirect("https://naac.mlrit.ac.in/");
+  }
+
   const page = accreditationPages[slug];
   if (!page) notFound();
 

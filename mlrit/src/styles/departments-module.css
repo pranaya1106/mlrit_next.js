@@ -302,8 +302,8 @@
 /* ── Hero ── */
 .dept-hero {
   background: linear-gradient(135deg, #155218, #1F6B24);
-  min-height: 60vh;
-  padding: 80px 48px 60px;
+  min-height: 40vh;
+  padding: 40px 48px 40px;
   position: relative;
   overflow: hidden;
   display: flex;

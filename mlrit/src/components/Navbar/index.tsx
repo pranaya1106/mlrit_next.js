@@ -49,15 +49,34 @@ export default function Navbar() {
       <nav className="main-nav" aria-label="Main navigation">
         <div className="container main-nav__inner">
           <ul className="main-nav__list" id="mainNavList">
-            <li className="main-nav__item">
+            <li className="main-nav__item main-nav__item--about">
               <a href="#" className="main-nav__link">
                 About <span className="chevron" />
               </a>
-              <div className="dropdown">
+              <div className="dropdown about-dropdown">
                 <div className="dropdown__col">
-                  <h4>Institution</h4>
-                  <a href="#">Vision and Mission</a>
-                  <a href="#">Accreditations</a>
+                  <h4>About MLRIT</h4>
+                  <div className="dropdown__nested-item">
+                    <span className="dropdown__nested-trigger">
+                      Vision &amp; Mission <span className="chevron chevron--sub" />
+                    </span>
+                    <div className="dropdown__submenu">
+                      <Link href="/about/vision-mission/introduction">Introduction</Link>
+                      <Link href="/about/vision-mission/vision-mission">Vision &amp; Mission</Link>
+                    </div>
+                  </div>
+                  <Link href="/about/legacy">Legacy</Link>
+                  <Link href="/about/rankings-awards">Rankings &amp; Awards</Link>
+                  <Link href="/about/brochure">Brochure</Link>
+                  <div className="dropdown__nested-item">
+                    <span className="dropdown__nested-trigger">
+                      Messages <span className="chevron chevron--sub" />
+                    </span>
+                    <div className="dropdown__submenu">
+                      <Link href="/about/messages/principal">Principal&apos;s Message</Link>
+                      <Link href="/about/messages/dean">Dean&apos;s Message</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>

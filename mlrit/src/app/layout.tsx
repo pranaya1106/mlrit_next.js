@@ -18,6 +18,7 @@ import "@/styles/research.css";
 import "@/styles/iqac.css";
 import "@/styles/chronicles.css";
 import "@/styles/theme.css";
+import "@/styles/about.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",

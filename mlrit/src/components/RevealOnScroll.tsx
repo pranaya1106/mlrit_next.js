@@ -4,11 +4,21 @@ import { useEffect } from "react";
 
 export default function RevealOnScroll() {
   useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
-    if (!els.length) return;
+    // ── Standard .reveal elements (existing behaviour) ──────────
+    const revealEls = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
+
+    // ── About pages: opt-in to animation only after JS hydrates ──
+    // Elements start visible (opacity:1). We add .about-pre here to
+    // enable the CSS transition, then immediately observe — so anything
+    // already in the viewport fires is-revealed on the first tick.
+    const aboutEls = Array.from(document.querySelectorAll<HTMLElement>(".about-reveal"));
+    aboutEls.forEach((el) => el.classList.add("about-pre"));
+
+    const allEls = [...revealEls, ...aboutEls];
+    if (!allEls.length) return;
 
     if (typeof IntersectionObserver === "undefined") {
-      els.forEach((el) => el.classList.add("is-revealed"));
+      allEls.forEach((el) => el.classList.add("is-revealed"));
       return;
     }
 
@@ -21,10 +31,10 @@ export default function RevealOnScroll() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
+      { threshold: 0, rootMargin: "0px 0px 0px 0px" }
     );
 
-    els.forEach((el) => io.observe(el));
+    allEls.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 

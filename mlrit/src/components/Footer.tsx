@@ -9,8 +9,9 @@ export default function Footer() {
         <div className="nf-col">
           <h5>About</h5>
           <ul>
-            <li><a href="https://mlrit.ac.in/about-us/" target="_blank" rel="noopener">Our Story</a></li>
-            <li><a href="https://mlrit.ac.in/about-us/governing-body/" target="_blank" rel="noopener">Leadership</a></li>
+            <li><Link href="/about/vision-mission/introduction">Our Story</Link></li>
+            <li><Link href="/about/legacy">Leadership &amp; Legacy</Link></li>
+            <li><Link href="/about/rankings-awards">Rankings &amp; Awards</Link></li>
             <li><Link href="/iqac">Accreditations</Link></li>
             <li><a href="https://mlrit.ac.in/careers/" target="_blank" rel="noopener">Careers at MLRIT</a></li>
           </ul>
